@@ -1,4 +1,4 @@
-export const siteName = "Jalal Merhib";
+export const siteName = "Jalal Merhabi";
 export const siteDescription =
   "Cinematic videographer and editor delivering high-quality event films, social media content, and promotional videos with a strong focus on storytelling and visual impact.";
 export const siteUrl =
