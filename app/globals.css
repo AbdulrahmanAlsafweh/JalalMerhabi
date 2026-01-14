@@ -19,7 +19,7 @@
 
 body {
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-space), sans-serif;
   color: var(--cream);
   min-height: 100vh;
   background:
@@ -28,6 +28,10 @@ body {
     radial-gradient(circle at 15% 70%, rgba(18, 21, 36, 0.7), transparent 45%),
     linear-gradient(125deg, #1b1f2c 0%, #6a1a33 28%, #b9323f 55%, #f0b49a 100%);
   background-attachment: fixed;
+}
+
+main {
+  display: block;
 }
 
 .page {
@@ -50,8 +54,16 @@ body {
   margin-bottom: 10px;
 }
 
+.hero-role {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
 h1 {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--font-bebas), sans-serif;
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   letter-spacing: 0.08em;
   margin: 0 0 12px;
@@ -100,7 +112,7 @@ h1 {
   border-bottom: 1px solid var(--line);
   align-items: center;
   animation: slideUp 0.9s ease both;
-  animation-delay: var(--delay);
+  animation-delay: 0ms;
 }
 
 .pricing-row:last-child {
@@ -137,7 +149,7 @@ h1 {
 }
 
 .price {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--font-bebas), sans-serif;
   font-size: clamp(2rem, 5vw, 3.2rem);
   color: #fff;
   text-align: center;
@@ -218,5 +230,15 @@ h1 {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
