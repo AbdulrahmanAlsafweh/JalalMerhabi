@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jalal Merhib icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b1f2c" />
+      <stop offset="35%" stop-color="#6a1a33" />
+      <stop offset="60%" stop-color="#b9323f" />
+      <stop offset="100%" stop-color="#f0b49a" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)" />
+  <rect x="56" y="56" width="400" height="400" rx="88" fill="rgba(18, 21, 36, 0.5)" />
+  <text x="50%" y="54%" text-anchor="middle" font-size="140" font-family="Arial, sans-serif" letter-spacing="12" fill="#ffffff" font-weight="700">
+    JM
+  </text>
+</svg>
