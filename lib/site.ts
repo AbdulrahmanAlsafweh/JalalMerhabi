@@ -5,4 +5,4 @@ export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://jalalmerhib.com";
 export const sitePhone = "+961 81 669 126";
 export const sitePhoneRaw = "+96181669126";
-export const siteInstagram = "https://instagram.com/j.visuals0";
+export const siteInstagram = "https://www.instagram.com/j.visuals0/";
