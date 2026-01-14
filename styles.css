@@ -1,0 +1,222 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  --cream: #f6e9dd;
+  --peach: #f3b7a0;
+  --coral: #e4806c;
+  --crimson: #b0283a;
+  --burgundy: #8a1f33;
+  --ink: #1c1f2d;
+  --night: #121524;
+  --mist: rgba(255, 255, 255, 0.7);
+  --line: rgba(255, 255, 255, 0.35);
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--cream);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.08), transparent 45%),
+    radial-gradient(circle at 75% 20%, rgba(255, 255, 255, 0.12), transparent 40%),
+    radial-gradient(circle at 15% 70%, rgba(18, 21, 36, 0.7), transparent 45%),
+    linear-gradient(125deg, #1b1f2c 0%, #6a1a33 28%, #b9323f 55%, #f0b49a 100%);
+  background-attachment: fixed;
+}
+
+.page {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 60px 24px 48px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease-out both;
+}
+
+.hero-topline {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.85rem;
+  color: var(--mist);
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: 0.08em;
+  margin: 0 0 12px;
+}
+
+.hero-blurb {
+  max-width: 720px;
+  margin: 0 auto 18px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.book-now {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-now:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(15, 9, 24, 0.25);
+}
+
+.pricing {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(140deg, rgba(30, 31, 49, 0.75), rgba(255, 255, 255, 0.05));
+}
+
+.pricing-row {
+  display: grid;
+  grid-template-columns: 1.1fr 2.1fr 0.7fr;
+  gap: 20px;
+  padding: 28px 30px;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+  animation: slideUp 0.9s ease both;
+  animation-delay: var(--delay);
+}
+
+.pricing-row:last-child {
+  border-bottom: none;
+}
+
+.tier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  background: rgba(18, 20, 34, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tier-name {
+  font-size: 0.95rem;
+}
+
+.features {
+  margin: 0;
+  padding: 0 0 0 18px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.features li {
+  margin-bottom: 6px;
+}
+
+.price {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.notes {
+  margin-top: 26px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  animation: fadeIn 1s ease both;
+  animation-delay: 0.35s;
+}
+
+.notes p {
+  margin: 0 0 12px;
+}
+
+.notes .ig {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 860px) {
+  .pricing {
+    border-radius: 22px;
+  }
+
+  .pricing-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .features {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .tier {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 48px 18px 38px;
+  }
+
+  .book-now {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pricing-row {
+    padding: 24px 20px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
